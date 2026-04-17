@@ -46,7 +46,7 @@ let cpf = '';
 // Função que irá buscar usuário ATIVO ou BLOQUEADO no backend
 async function confimarUsuario(){
     try {
-        // const baseUrl = 'https://api-backend-catraca.vercel.app/catraca';
+        const baseUrl = 'https://api-backend-catraca.vercel.app/catraca';
        
         const respostaApi = await fetch(baseUrl, {
             method: 'POST',
