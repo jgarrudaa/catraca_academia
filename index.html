@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparta Gym - Catraca Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .font-sparta { font-family: 'Cinzel', serif; }
+        body { font-family: 'Montserrat', sans-serif; }
+        .bg-sparta { background: radial-gradient(circle at top, #1a1a1a 0%, #050505 100%); }
+        .status-enter { animation: slideUp 0.4s ease-out forwards; }
+        @keyframes slideUp {
+            from { transform: translateY(15px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-sparta text-zinc-100 min-h-screen flex items-center justify-center p-4">
+
+    <main class="w-full max-w-xl bg-zinc-900 border border-zinc-800 rounded-[2rem] shadow-2xl overflow-hidden transition-all">
+        
+        <div class="pt-12 pb-8 flex flex-col items-center border-b border-zinc-800/50 bg-black/20">
+            
+            <div class="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-b from-[#d4af37] to-[#8a6d10] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                <div class="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-b from-[#d4af37] to-[#8a6d10] rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
+                    <img src="assets/img/logo.png" alt="Sparta Gym Logo" class="w-12 h-12 md:w-20 md:h-20 object-contain">
+                </div>
+            </div>
+
+            <h1 class="font-sparta text-3xl md:text-4xl tracking-widest mt-6 text-[#d4af37]">
+                SPARTA GYM
+            </h1>
+        </div>
+
+        <div class="p-6 md:p-10">
+            <div class="mb-6">
+                <input type="text" id="cpfInput" placeholder="000.000.000-00" readonly
+                    class="w-full bg-black border-2 border-zinc-800 rounded-xl py-4 md:py-6 text-center text-2xl md:text-3xl font-mono tracking-[0.2em] text-[#d4af37] shadow-inner focus:outline-none">
+            </div>
+
+            <div class="grid grid-cols-3 gap-3 md:gap-4 mb-6">
+                <button id="btn-1" class="btn-num">1</button>
+                <button id="btn-2" class="btn-num">2</button>
+                <button id="btn-3" class="btn-num">3</button>
+                
+                <button id="btn-4" class="btn-num">4</button>
+                <button id="btn-5" class="btn-num">5</button>
+                <button id="btn-6" class="btn-num">6</button>
+                
+                <button id="btn-7" class="btn-num">7</button>
+                <button id="btn-8" class="btn-num">8</button>
+                <button id="btn-9" class="btn-num">9</button>
+
+                <button id="btn-apagar" class="bg-zinc-800 hover:bg-zinc-700 rounded-xl py-4 md:py-5 text-xl transition-all active:scale-95">←</button>
+                <button id="btn-0" class="btn-num">0</button>
+                <button id="btn-limpar" class="bg-zinc-800 hover:bg-red-900/30 text-red-500 rounded-xl py-4 md:py-5 text-sm font-bold transition-all active:scale-95">LIMPAR</button>
+            </div>
+
+            <button id="btn-acessar" 
+                class="w-full bg-[#580a0a] hover:bg-[#7a0e0e] text-white font-sparta py-5 md:py-6 rounded-xl text-xl tracking-widest transition-all shadow-lg active:scale-95 border-b-4 border-black/40">
+                ACESSAR
+            </button>
+        </div>
+
+        <div id="usuarioStatus" class="min-h-[100px] pb-8 flex items-center justify-center px-6">
+            <span class="text-zinc-600 text-xs tracking-widest">AGUARDANDO CPF...</span>
+        </div>
+    </main>
+
+    <script>
+        // Simplificação das classes para garantir consistência
+        document.querySelectorAll('.btn-num').forEach(btn => {
+            btn.className = "bg-zinc-800 hover:bg-zinc-700 border border-zinc-700/30 text-white rounded-xl py-4 md:py-5 text-2xl font-bold transition-all active:scale-90";
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
