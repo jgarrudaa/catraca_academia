@@ -254,9 +254,9 @@ Este projeto funciona junto com o Sparta Gym Admin Panel, onde gestores podem:
 
 ## 🌍 Deploy
 
-- Frontend Catraca: `https://catraca-academia-six.vercel.app/`
-- Frontend Admin Panel: `https://administrativo-academia.vercel.app/`
-- Backend: `https://api-backend-catraca.vercel.app`
+- 🔗 Frontend Admin: [https://administrativo-academia.vercel.app/](https://administrativo-academia.vercel.app/)
+- 🔗 Frontend Catraca: [https://catraca-academia-six.vercel.app/](https://catraca-academia-six.vercel.app/)
+- 🔗 Backend: [https://api-backend-catraca.vercel.app](https://api-backend-catraca.vercel.app)
 
 ---
 
